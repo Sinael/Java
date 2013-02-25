@@ -1,4 +1,3 @@
-
 import java.sql.*;
 import java.util.Scanner;
 
@@ -19,7 +18,7 @@ public class crud{
 		int l3;
  
   try{
-  con = DriverManager.getConnection(url, "postgres", "Gallardo1");
+  con = DriverManager.getConnection(url, "name", "pass");
   
   switch (funkcja.toLowerCase())
   {
@@ -47,7 +46,7 @@ public class crud{
 	  break;
   case "insert":
   { 
-	  main.main("Menu INSERT 1-kontynuu³acja: 0 - powrót");
+	  main.main("Menu INSERT 1-kontynuuï¿½acja: 0 - powrï¿½t");
 	  l3 = whileselect.nextInt();
 	  while (l3 == 1)
 	  {
@@ -70,7 +69,7 @@ public class crud{
 	  		}	
 		  catch (Exception s)
 	  		{
-	  			main.main("Z³e dane");	  
+	  			main.main("Zï¿½e dane");	  
 	  		}
 	  		l3 = whileselect.nextInt();
 		  if (l3==0)
@@ -82,7 +81,7 @@ public class crud{
   break;
   case "update":
   	{ 
-  		main.main("Menu UPDATE 1-kontynuu³acja: 0 - powrót");
+  		main.main("Menu UPDATE 1-kontynuuï¿½acja: 0 - powrï¿½t");
 		  l3 = whileselect.nextInt();
 		  while (l3 == 1)
 		  {
@@ -114,7 +113,7 @@ public class crud{
   		
   		  catch (Exception s)
   		  {
-  			  main.main("B³¹d zapytania sql");
+  			  main.main("Bï¿½ï¿½d zapytania sql");
   		  }
   		  l3 = whileselect.nextInt();
   		  if (l3==0)
@@ -127,7 +126,7 @@ public class crud{
   	
   case "select":	
 	  try {
-		  main.main("Menu SELECT 1-kontynuu³acja: 0 - powrót");
+		  main.main("Menu SELECT 1-kontynuuï¿½acja: 0 - powrï¿½t");
 		  Scanner switch2scanner = new Scanner (System.in);
 		  l3 = whileselect.nextInt();
 		  while (l3 == 1)
@@ -178,9 +177,6 @@ public class crud{
 	  }
 		  
 			  
-		//con = DriverManager.getConnection(url, "postgres", "Gallardo1");
-		  
-		  
 	
 	  catch (Exception s)
 	  {
@@ -191,7 +187,7 @@ public class crud{
   }
   catch (SQLException s)
   {
-	  main.main("B³¹d po³¹czenia z baz¹");
+	  main.main("Bï¿½ï¿½d poï¿½ï¿½czenia z bazï¿½");
   }
   }
 }
